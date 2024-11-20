@@ -1,18 +1,23 @@
-## Cookies
-1. Pergi ke halaman contest as admin
-2. Download Extension Cookie Editor atau sejenisnya. Fungsinya untuk memudahkan copy cookie
-3. Export > JSON
-4. Masukkan ke cookies.txt
-
-## Slug name
-1. copy bagian dari url contest tanpa "https://www.hackerrank.com/"
-2. Masukkan ke slug_name.txt
-
-## Cara menjalankan
-1. Pastikan mempunyai python terinstall
-2. Double click run.bat
+Simplified HackerRank contest submission downloader.
 
 ---
 
-Referensi:
-https://github.com/kasvith/hackerrank-dl
+## Cookies Config
+1. Go to the contest page (make sure you are the admin of the contest).
+2. Download the Cookie Editor extension in your browser. It helps in copying the cookies easily.
+3. Export > JSON.
+4. Paste it into `config/cookies.txt`.
+
+## Slug Name Config
+1. Copy the part of the contest URL excluding "https://www.hackerrank.com/".
+2. Paste it into `config/slug_name.txt`.
+
+## How to Run
+1. Ensure that Python is installed.
+2. Make sure that the slug name and cookies have been set up properly.
+3. Double-click `run.bat` or do `python src/main.py`.
+
+---
+
+Reference:  
+[https://github.com/kasvith/hackerrank-dl](https://github.com/kasvith/hackerrank-dl)

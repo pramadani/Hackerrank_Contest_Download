@@ -1,1 +1,1 @@
-python download.py
+python src/main.py
