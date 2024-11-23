@@ -1,4 +1,4 @@
-Simplified HackerRank contest submission downloader.
+**Simplified HackerRank Contest Submission Downloader**
 
 ---
 
@@ -13,10 +13,9 @@ Simplified HackerRank contest submission downloader.
 2. Paste it into `config/slug_name.txt`.
 
 ## How to Run
-1. Ensure that Python is installed.
-2. Make sure that the slug name and cookies have been set up properly.
-3. `python download.py`.
-4. `python pick.py`.
+1. Make sure that the slug name and cookies have been set up properly.
+2. `python download.py`.
+3. `python pick.py`.
 
 ---
 
