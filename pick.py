@@ -17,7 +17,7 @@ mahasiswa = {username: {'nim': nim, 'nama': name}
              for username, nim, name in zip(usernames, nims, names)}
 
 def move_file_to_result(username, nim, nama, challenge_name, user_file_path):
-    folder_user = f"{nim}_{username}_{nama}"
+    folder_user = f"{nim}_{nama}_{username}"
     target_folder = os.path.join(output_folder, challenge_name, folder_user)
     os.makedirs(target_folder, exist_ok=True)
     target_file = os.path.join(target_folder, os.path.basename(user_file_path))
