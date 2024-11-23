@@ -1,7 +1,7 @@
 [
     {
         "domain": "www.hackerrank.com",
-        "expirationDate": 1731501919,
+        "expirationDate": 1732375851,
         "hostOnly": true,
         "httpOnly": false,
         "name": "session_id",
@@ -10,7 +10,7 @@
         "secure": true,
         "session": false,
         "storeId": null,
-        "value": "0rdyklf4-1731494719314"
+        "value": "jysfm1l4-1732368651851"
     },
     {
         "domain": ".hackerrank.com",
@@ -27,7 +27,7 @@
     },
     {
         "domain": "www.hackerrank.com",
-        "expirationDate": 1731661669.1921,
+        "expirationDate": 1733327098.504551,
         "hostOnly": true,
         "httpOnly": true,
         "name": "remember_hacker_token",
@@ -36,11 +36,11 @@
         "secure": false,
         "session": false,
         "storeId": null,
-        "value": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaGJDRnNHYVFUSUxYY0JJaUlrTW1Fa01UQWtWRWxCTm5rMVVFcEJjM3BKV1hObVpHWnJkSGt6VDBraUZ6RTNNekEwTlRJd05qa3VOamMwTVRNeE9RWTZCa1ZHIiwiZXhwIjoiMjAyNC0xMS0xNVQwOTowNzo0OS42NzRaIiwicHVyIjpudWxsfX0%3D--25e74b06eb5bde31dda4fa892f82d67870faacaa"
+        "value": "eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaGJDRnNHYVFUSUxYY0JJaUlrTW1Fa01UQWtRVVk1Vm1ScVdYSk1RbVJJTGpST00yd3VhMnR6ZFVraUZ6RTNNekl4TVRjMU1EQXVOek0wT1RBM05nWTZCa1ZHIiwiZXhwIjoiMjAyNC0xMi0wNFQxNTo0NTowMC43MzRaIiwicHVyIjpudWxsfX0%3D--39e5f621401942432e25537d0599f40b49609dff"
     },
     {
         "domain": "www.hackerrank.com",
-        "expirationDate": 1731807272.477514,
+        "expirationDate": 1732722300.026581,
         "hostOnly": true,
         "httpOnly": false,
         "name": "react_var2",
@@ -53,7 +53,7 @@
     },
     {
         "domain": "www.hackerrank.com",
-        "expirationDate": 1731807272.477455,
+        "expirationDate": 1732722300.026515,
         "hostOnly": true,
         "httpOnly": false,
         "name": "react_var",
@@ -63,6 +63,18 @@
         "session": false,
         "storeId": null,
         "value": "false__cnt5"
+    },
+    {
+        "domain": "www.hackerrank.com",
+        "hostOnly": true,
+        "httpOnly": false,
+        "name": "web_browser_id",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": true,
+        "storeId": null,
+        "value": "ffd08b72e4290d97665614a207c9278d"
     },
     {
         "domain": ".hackerrank.com",
@@ -79,7 +91,7 @@
     },
     {
         "domain": ".hackerrank.com",
-        "expirationDate": 1765279447.188164,
+        "expirationDate": 1766898016.197252,
         "hostOnly": false,
         "httpOnly": false,
         "name": "optimizelyBuckets",
@@ -100,7 +112,7 @@
         "secure": false,
         "session": true,
         "storeId": null,
-        "value": "MTczMTQ5NDY5NjkyMQ=="
+        "value": "MTczMjM2ODYzMTkzMg=="
     },
     {
         "domain": "www.hackerrank.com",
@@ -112,7 +124,7 @@
         "secure": false,
         "session": true,
         "storeId": null,
-        "value": "c9fce0546dfa4ea243b17c95693195f3"
+        "value": "4c306136459bf376ba4f23eb6a0dfcd6"
     },
     {
         "domain": "www.hackerrank.com",
@@ -142,7 +154,7 @@
     },
     {
         "domain": "www.hackerrank.com",
-        "expirationDate": 1761989811,
+        "expirationDate": 1763874334,
         "hostOnly": true,
         "httpOnly": false,
         "name": "hacker_editor_theme",
@@ -154,8 +166,20 @@
         "value": "light"
     },
     {
+        "domain": "www.hackerrank.com",
+        "hostOnly": true,
+        "httpOnly": false,
+        "name": "session_referrer",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": true,
+        "storeId": null,
+        "value": "https%3A%2F%2Feling.ub.ac.id%2F"
+    },
+    {
         "domain": ".hackerrank.com",
-        "expirationDate": 1765279447.186775,
+        "expirationDate": 1766898016.195296,
         "hostOnly": false,
         "httpOnly": false,
         "name": "optimizelySegments",
@@ -243,7 +267,20 @@
     },
     {
         "domain": "www.hackerrank.com",
-        "expirationDate": 1731581102.736291,
+        "expirationDate": 1766833323.585958,
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "latihan-uap-kelas-c_crp",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "*nil*"
+    },
+    {
+        "domain": "www.hackerrank.com",
+        "expirationDate": 1732455040.852456,
         "hostOnly": true,
         "httpOnly": false,
         "name": "metrics_user_identifier",
@@ -253,6 +290,19 @@
         "session": false,
         "storeId": null,
         "value": "1772dc8-8cdbed163d701130726d8f116d1d4db6d39046e2"
+    },
+    {
+        "domain": "www.hackerrank.com",
+        "expirationDate": 1766121653.913879,
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "pemrograman-dasar-tif-d-seleksi-kondisi_crp",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "*nil*"
     },
     {
         "domain": "www.hackerrank.com",
@@ -266,6 +316,30 @@
         "session": false,
         "storeId": null,
         "value": "direct"
+    },
+    {
+        "domain": "www.hackerrank.com",
+        "hostOnly": true,
+        "httpOnly": false,
+        "name": "session_landing_url",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": true,
+        "storeId": null,
+        "value": "https%3A%2F%2Fwww.hackerrank.com%2Flc1-remidi-input-output-dan-process"
+    },
+    {
+        "domain": "www.hackerrank.com",
+        "hostOnly": true,
+        "httpOnly": false,
+        "name": "session_referring_domain",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": true,
+        "storeId": null,
+        "value": "eling.ub.ac.id"
     },
     {
         "domain": "www.hackerrank.com",

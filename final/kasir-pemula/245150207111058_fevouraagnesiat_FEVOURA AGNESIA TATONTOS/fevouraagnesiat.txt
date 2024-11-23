@@ -1,0 +1,82 @@
+import java.io.*;
+        import java.util.*;
+        import java.text.*;
+        import java.math.*;
+        import java.util.regex.*;
+
+        public class Solution {
+            public static void main(String args[] ) throws Exception {
+        
+       Scanner scanner = new Scanner(System.in);
+        System.out.println("------------------------------");
+        System.out.println("Nokotan Mart");
+        System.out.println("Jl. Noko Shikanoko");
+        System.out.println("------------------------------");
+
+
+        String date = scanner.nextLine();
+        String customerName = scanner.nextLine();
+        String customerId = scanner.nextLine();
+
+        System.out.printf("%30s%n", date);
+        System.out.println(customerName);
+        System.out.println(customerId);
+
+
+        System.out.println("------------------------------");
+        double subtotal1, subtotal2, subtotal, pajak, nextPajak, total, kembali;
+
+        String item1Name = scanner.nextLine();
+        int item1Price = scanner.nextInt();
+        int item1Quantity = scanner.nextInt();
+        int item1Discount = scanner.nextInt();
+
+        subtotal1 = (item1Quantity*item1Price) - ((item1Discount/100.0)*
+                (item1Quantity*item1Price));
+
+        scanner.nextLine();
+
+        String item2Name = scanner.nextLine();
+        int item2Price = scanner.nextInt();
+        int item2Quantity = scanner.nextInt();
+        int item2Discount = scanner.nextInt();
+
+        subtotal2 = (item2Quantity*item2Price) - ((item2Discount/100.0)*(item2Quantity*item2Price));
+
+        System.out.println(item1Name);
+        String item1Desc = String.format("%d x %d - %d%% %16.2f", item1Quantity, item1Price, item1Discount, subtotal1);
+        System.out.println(item1Desc);
+         System.out.println(item2Name);
+        String item2Desc = String.format("%d x %d - %d%% %16.2f" , item2Quantity, item2Price, item2Discount, subtotal2);
+        System.out.println(item2Desc);
+
+
+        System.out.println("------------------------------");
+        System.out.print("Sub Total");
+
+        subtotal = subtotal1 + subtotal2;
+
+        System.out.printf("%21.2f%n", subtotal);
+
+        pajak = (subtotal * (10/100.0));
+
+        nextPajak = (pajak + subtotal);
+
+        total = nextPajak - ((5/100.0)*nextPajak);
+
+        System.out.print("Total");
+        System.out.printf("%25.2f%n", total);
+
+        System.out.print("Bayar");
+        double payment = scanner.nextDouble();
+        System.out.printf("%25.2f%n", payment);
+
+        kembali = payment-total;
+        System.out.print("Kembali");
+        System.out.printf("%23.2f%n", kembali);
+
+        System.out.println("------------------------------");
+
+
+            }
+        }

@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class kasikoko{
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        String tanggal = s.nextLine();
+        String nama = s.nextLine();
+        String nim = s.nextLine();
+        String produk1 = s.nextLine();
+        int harga1 = s.nextInt();
+        int jumlah1 = s.nextInt();
+        int diskon1 = s.nextInt();
+        s.nextLine();
+        String produk2 = s.nextLine();
+        int harga2 = s.nextInt();
+        int jumlah2 = s.nextInt();
+        int diskon2 = s.nextInt();
+        int bayar = s.nextInt();
+
+        System.out.println("------------------------------");
+        System.out.println("Nokotan Mart");
+        System.out.println("JL. Noko Shikanoko");
+        System.out.println("------------------------------");
+        System.out.printf("%30s\n",tanggal);
+        System.out.println(nama);
+        System.out.println(nim);
+        System.out.println("------------------------------");
+        System.out.println(produk1);
+        
+        int totalproduk1 = jumlah1 * harga1 * (100-diskon1)/100 ;
+
+        System.out.print(jumlah1 + " x " + harga1 + " - " + diskon1 + "%");
+        System.out.printf("%14d%s\n", totalproduk1, ".00");
+        System.out.println(produk2);
+
+        int totalproduk2 = jumlah2 * harga2 * (100-diskon2)/100 ;
+
+        System.out.print(jumlah2 + " x " + harga2 + " - " + diskon2 + "%");
+        System.out.printf("%14d%s\n", totalproduk2, ".00");
+
+        System.out.println("------------------------------");
+        System.out.print("Sub Total");
+        int subtotal = totalproduk1 + totalproduk2;
+        System.out.printf("%18d%s\n",subtotal , ".00");
+
+        System.out.print("Total");
+        double total = ((double)subtotal * 95)/100 * 110/100;
+        System.out.printf("%25.2f\n",total);
+
+        System.out.print("Bayar");
+        System.out.printf("%22d%s\n",bayar,".00");
+
+        System.out.print("Kembali");
+        double kembali = bayar - total;
+        System.out.printf("%23.2f\n",kembali);
+        System.out.println("------------------------------");
+
+
+
+
+    }
+    
+}

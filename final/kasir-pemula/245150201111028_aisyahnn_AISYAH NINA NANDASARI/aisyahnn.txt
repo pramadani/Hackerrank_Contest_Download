@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String date = scanner.nextLine();
+        String customerName = scanner.nextLine();
+        String customerId = scanner.nextLine();
+        
+        String item1Name = scanner.nextLine();
+        int item1Price = scanner.nextInt();
+        int item1Quantity = scanner.nextInt();
+        int item1Discount = scanner.nextInt();
+        
+        scanner.nextLine(); 
+        
+        String item2Name = scanner.nextLine();
+        int item2Price = scanner.nextInt();
+        int item2Quantity = scanner.nextInt();
+        int item2Discount = scanner.nextInt(); 
+        double payment = scanner.nextDouble();
+        
+        double subTotal1 = item1Quantity * item1Price * (1 - item1Discount / 100.0);
+        double subTotal2 = item2Quantity * item2Price * (1 - item2Discount / 100.0);
+        double subTotal = subTotal1 + subTotal2;
+        
+        double memberDiscount = subTotal * 0.05;
+        double afterMemberDiscount = subTotal - memberDiscount;
+        double tax = afterMemberDiscount * 0.10;
+        double total = afterMemberDiscount + tax;
+        
+        double change = payment - total;
+        
+        String formattedSubTotal1 = String.format("%.2f", subTotal1);
+        String formattedSubTotal2 = String.format("%.2f", subTotal2);
+        String formattedSubTotal = String.format("%.2f", subTotal);
+        String formattedTotal = String.format("%.2f", total);
+        String formattedChange = String.format("%.2f", change);
+        String formattedPayment = String.format("%.2f", payment);
+        
+        System.out.println("------------------------------");
+        System.out.println("Nokotan Mart");
+        System.out.println("Jl. Noko Shikanoko");
+        System.out.println("------------------------------");
+        System.out.printf("%30s%n", date);
+        System.out.println(customerName);
+        System.out.println(customerId);
+        System.out.println("------------------------------");
+        System.out.printf("%-20s%10s%n", item1Name, formattedSubTotal1);
+        System.out.printf("%-20s%10s%n", item1Quantity + " x " + item1Price + " - " + item1Discount + "%", "");
+        System.out.printf("%-20s%10s%n", item2Name, formattedSubTotal2);
+        System.out.printf("%-20s%10s%n", item2Quantity + " x " + item2Price + " - " + item2Discount + "%", "");
+        System.out.println("------------------------------");
+        System.out.printf("%-20s%10s%n", "Sub Total", formattedSubTotal);
+        System.out.printf("%-20s%10s%n", "Total", formattedTotal);
+        System.out.printf("%-20s%10s%n", "Bayar", formattedPayment);
+        System.out.printf("%-20s%10s%n", "Kembali", formattedChange);
+        System.out.println("------------------------------");
+    }
+}

@@ -15,7 +15,8 @@ Simplified HackerRank contest submission downloader.
 ## How to Run
 1. Ensure that Python is installed.
 2. Make sure that the slug name and cookies have been set up properly.
-3. Double-click `run.bat` or do `python src/main.py`.
+3. `python download.py`.
+4. `python pick.py`.
 
 ---
 

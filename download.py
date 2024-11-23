@@ -1,6 +1,5 @@
 import json
 import subprocess
-import os
 
 def read_slug_name(slug_file):
     with open(slug_file, 'r') as file:
@@ -41,20 +40,18 @@ def run_hackerrank_dl(executable):
     except subprocess.CalledProcessError as e:
         print(f'Error executing {executable}: {e}')
 
-if __name__ == "__main__":
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    slug_file = os.path.join(base_dir, '../config/slug_name.txt')
-    cookies_file = os.path.join(base_dir, '../config/cookies.txt')
+if __name__ == "__main__":    
+    slug_file = 'config/slug_name.txt'
+    cookies_file = 'config/cookies.txt'
 
     slug_name = read_slug_name(slug_file)
     cookies = read_cookies(cookies_file)
     cookie_string = create_cookie_string(cookies)
 
-    output_file = os.path.join(base_dir, '../config.yaml')
+    output_file = 'config.yaml'
     write_config_to_yaml(slug_name, cookie_string, output_file)
 
     print('Configuration written to config.yaml')
 
-    hackerrank_dl_path = os.path.join(base_dir, 'hackerrank-dl.exe')
+    hackerrank_dl_path = 'hackerrank-dl.exe'
     run_hackerrank_dl(hackerrank_dl_path)

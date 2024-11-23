@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+        double suhu;
+        suhu = in.nextDouble();
+
+        double c0 = (double)5/9*(suhu-32);
+        double c1 = (double)5/9*(suhu-32)+5;
+        double r1 = (double)4/5*c1;
+
+        double c2 = c1+8;
+        double r2 = (double)4/5*c2;
+
+        double sK = (c0+273.15)-(c2+273.15);
+
+        System.out.println("===== Suhu Anda Sekarang =====");
+        System.out.println("== Suhu di Pos 1");
+        System.out.printf("%-15s: %.2f %1c \n", "Satuan Celsius", c1, 'C');
+        System.out.printf("%-15s: %.2f %1c \n", "Satuan Reamur", r1, 'R');
+        System.out.printf("== Suhu di Pos 2 \n");
+        System.out.printf("%-15s: %.2f %1c \n", "Satuan Celsius", c2, 'C');
+        System.out.printf("%-15s: %.2f %1c \n", "Satuan Reamur", r2, 'R');
+        System.out.println("== Selisih Suhu Awal ke Pos 2");
+        System.out.printf("%-15s: %.2f %1c \n", "Selisih Suhu", sK, 'K');
+        System.out.print("==============================");
+    }
+}

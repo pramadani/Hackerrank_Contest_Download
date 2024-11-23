@@ -1,0 +1,79 @@
+import java.io.*;
+        import java.util.*;
+        import java.text.*;
+        import java.math.*;
+        import java.util.regex.*;
+
+        public class Solution {
+            public static void main(String args[] ) throws Exception {
+                Scanner scanner = new Scanner(System.in);
+        System.out.println("masukkan tanggal :");
+        String date = scanner.nextLine();
+        System.out.println("masukkan nama :");
+        String customerName = scanner.nextLine();
+        System.out.println("masukkan id :");
+        String customerId = scanner.nextLine();
+        
+       
+        System.out.println("masukkan item :");
+        String item1 = scanner.nextLine();
+        
+        System.out.println("masukkan harga :");
+        int item1price =scanner.nextInt();
+        System.out.println("masukkan jumlah");
+        int jumlah1 = scanner.nextInt();
+        System.out.println("masukkan diskon :");
+        int item1diskon = scanner.nextInt();
+       
+            
+        scanner.nextLine();
+        System.out.println("masukkan item 2 :");
+        String item2 = scanner.nextLine();
+        System.out.println("masukkan harga 2 :");
+        int item2price =scanner.nextInt();
+        System.out.println("masukkan jumlah :");
+        int jumlah2 = scanner.nextInt();
+        System.out.println("masukkan diskon :");
+        int item2diskon = scanner.nextInt();
+        
+        System.out.println("bayar :");
+        int bayar=scanner.nextInt();
+
+        double hasil1=(double)(item1price*jumlah1)-(item1price*jumlah1*(double)item1diskon/100);
+        double hasil2=(double)(item2price*jumlah2)-(item2price*jumlah2*(double)item2diskon/100);
+        System.out.println ("------------------------------");
+        System.out.println("Nokotan Mart");
+        System.out.println("Jl. Noko Shikanoko");
+        System.out.println("------------------------------");
+        System.out.printf("%30s\n", date);
+        System.out.println(customerName);
+        System.out.println(customerId);
+        System.out.println("------------------------------");
+        System.out.println(item1);
+        String item1Desc = String.format("%d x %d - %d%%", jumlah1, item1price, item1diskon); 
+        System.out.print(item1Desc);
+        System.out.printf("%17.2f\n", hasil1);
+        
+        String item2Desc = String.format("%d x %d - %d%%", jumlah2, item2price, item2diskon);
+        System.out.println(item2);
+        System.out.print(item2Desc);
+        System.out.printf("%17.2f\n", hasil2);
+        System.out.println ("------------------------------");
+        
+        double subtotal=hasil1+hasil2;
+        System.out.printf("%-20s%10.2f\n", "Subtotal", subtotal);
+        double total=subtotal-(subtotal*0.05);
+        total+=(total*0.1);
+        System.out.printf("%-20s%10.2f\n", "Total", total);
+        System.out.printf("%-20s%10.2f\n", "Bayar", (double)bayar);
+        double kembali=bayar-total;
+        System.out.printf("%-20s%10.2f\n", "Kembali", kembali);
+        System.out.println ("------------------------------");
+                                                             
+
+        
+    }
+}
+                /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+            
+        

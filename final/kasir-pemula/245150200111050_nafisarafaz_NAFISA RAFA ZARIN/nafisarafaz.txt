@@ -1,0 +1,56 @@
+import java.io.*;
+        import java.util.*;
+        import java.text.*;
+        import java.math.*;
+        import java.util.regex.*;
+
+ public class Solution {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        String date = in.nextLine();
+        String customerName = in.nextLine();
+        String customerId = in.nextLine();
+        
+        String item1Name = in.nextLine();
+        int item1Price = in.nextInt();
+        int item1Quantity = in.nextInt();
+        int item1Discount = in.nextInt();
+
+        in.nextLine();
+
+        String item2Name = in.nextLine();
+        int item2Price = in.nextInt();
+        int item2Quantity = in.nextInt();
+        int item2Discount = in.nextInt(); 
+        
+        double payment = in.nextDouble();
+      
+        double payment1 = (double)(item1Price*item1Quantity)-(item1Price*item1Quantity*(double)item1Discount/100);
+        double payment2 = (double)(item2Price*item2Quantity)-(item2Price*item2Quantity*(double)item2Discount/100);
+        String item1Desc = String.format("%d x %d - %d%% %10.2f", item1Quantity, item1Price, item1Discount, payment1); 
+        String item2Desc = String.format("%d x %d - %d%% %10.2f", item2Quantity, item2Price, item2Discount, payment2); 
+        double subtotal = payment1 + payment2;
+        double totaldiskon = (subtotal - (subtotal*0.05));
+        double total = totaldiskon + (totaldiskon*0.1);
+        double kembali = payment - total;
+
+        System.out.println("------------------------------");
+        System.out.println("Nokotan Mart");
+        System.out.println("Jl. Noko Shikanoko");
+        System.out.println("------------------------------");
+        System.out.printf("%30s \n", date);
+        System.out.println(customerName);
+        System.out.println(customerId);
+        System.out.println("------------------------------");
+        System.out.printf("%-30s \n", item1Name);
+        System.out.printf("%-30s \n", item1Desc);
+        System.out.printf("%-30s \n", item2Name);
+        System.out.printf("%-30s \n", item2Desc);
+        System.out.println("------------------------------");
+        System.out.printf("%-20s %10.2f \n", "Sub Total", subtotal);
+        System.out.printf("%-20s %10.2f \n", "Total", total);
+        System.out.printf("%-20s %10.2f \n", "Bayar", payment);
+        System.out.printf("%-20s %10.2f \n", "Kembali", kembali);
+        System.out.println("------------------------------");
+    }    
+}

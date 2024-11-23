@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double faren, c1, c2, r1,c3, r2, k1, k2,sK;
+        String s = "===== Suhu Anda Sekarang =====";
+        System.out.printf("%s\n", s);
+        faren = input.nextDouble();
+        c1 = (5.0/9)*(faren- 32); // suhu awal (dalam celcius)
+        c2 = (c1 + 5); // pertambahan suhu di post 1 (celcius)
+        r1 = (4.0/5)*c2;// pertambahan suhu (reamur)
+         String e = "== Suhu di Pos 1";
+        System.out.printf("%s%n", e);
+        String a = "Satuan Celsius";
+        System.out.printf("%-14s %c %.2f C%n", a,':', c2);
+        String d = "Satuan Reamur";
+        System.out.printf("%-14s %c %.2f R%n", d,':' , r1);
+        String f = "== Suhu di Pos 2";
+        System.out.printf("%s%n", f);
+        c3 = (c2 + 8);
+        r2 = (4.0/5)*(c2 + 8); 
+        String g = "Satuan Celsius";          
+        System.out.printf("%-14s %c %.2f C%n", g,':' , c3);
+        String h = "Satuan Reamur";
+        System.out.printf("%-14s %c %.2f R%n", h,':' , r2);
+        String j = "== Selisih Suhu Awal ke Pos 2";
+         System.out.printf("%s%n", j);
+        k1 = (c1 + 273.15);
+        k2 = (c3 +  273.15);
+        sK = (k1-k2);
+         String l = "Selisih Suhu ";
+         System.out.printf("%-14s %c %.2f K%n", l, ':' , sK);
+        System.out.println("==============================");
+    
+
+    }
+}
