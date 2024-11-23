@@ -1,11 +1,16 @@
 import json
 import subprocess
+import os
 
 def read_slug_name(slug_file):
+    if not os.path.exists(slug_file):
+        raise FileNotFoundError(f"File slug_name.txt tidak ditemukan di {slug_file}")
     with open(slug_file, 'r') as file:
         return file.read().strip()
 
 def read_cookies(input_file):
+    if not os.path.exists(input_file):
+        raise FileNotFoundError(f"File cookies.txt tidak ditemukan di {input_file}")
     with open(input_file, 'r') as file:
         try:
             cookies = json.load(file)
@@ -34,15 +39,26 @@ rate: 1
         file.write(config_content)
 
 def run_hackerrank_dl(executable):
+    if not os.path.exists(executable):
+        raise FileNotFoundError(f"{executable} tidak ditemukan.")
     try:
         result = subprocess.run([executable], check=True)
         print(f'{executable} executed successfully with return code {result.returncode}.')
     except subprocess.CalledProcessError as e:
         print(f'Error executing {executable}: {e}')
 
-if __name__ == "__main__":    
-    slug_file = 'config/slug_name.txt'
-    cookies_file = 'config/cookies.txt'
+if __name__ == "__main__":
+    config_folder = 'config'
+    if not os.path.exists(config_folder):
+        raise FileNotFoundError(f"Folder {config_folder} tidak ditemukan!")
+
+    slug_file = os.path.join(config_folder, 'slug_name.txt')
+    cookies_file = os.path.join(config_folder, 'cookies.txt')
+
+    if not os.path.exists(slug_file):
+        raise FileNotFoundError(f"File slug_name.txt tidak ditemukan di {slug_file}")
+    if not os.path.exists(cookies_file):
+        raise FileNotFoundError(f"File cookies.txt tidak ditemukan di {cookies_file}")
 
     slug_name = read_slug_name(slug_file)
     cookies = read_cookies(cookies_file)
